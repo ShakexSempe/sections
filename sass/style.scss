@@ -1,5 +1,33 @@
+@import 'variables';
+@import 'mixins';
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid #0001;
+    font-family: $font-content;
 }
+
+body {
+    width: 100%;
+    background: $background-dark;
+    color: $text-light;
+}
+
+.container {
+    width: 100%;
+    
+}
+
+section {
+    border-color: pink;
+    @include flex (space-between, center , column);
+    position: relative;
+    min-height: 400px;
+    padding: 100px 20vw;
+
+    &.blue {
+        background-color: blue;
+    }
+}
+

@@ -2,6 +2,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid #0001;
+  font-family: "Prompt", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: #161616;
+  color: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+}
+
+section {
+  border-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 400px;
+  padding: 100px 20vw;
+}
+section.blue {
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */
