@@ -10,9 +10,10 @@
 
 body {
     width: 100%;
-    background: $background-dark;
     background: #202731;
+    background: $background-dark;
     color: $text-light;
+    overflow-x: hidden;
 }
 
 .container {
@@ -21,11 +22,12 @@ body {
 }
 
 section {
-    border-color: pink;
-    @include flex (space-between, center , column);
+    // border: 3px solid red;
+    @include flex (center, center , column);
     position: relative;
-    min-height: 400px;
-    padding: 100px 20vw;
+    min-height: 60vh;
+    padding: 10vh 10vw;
+    gap: 1rem;
 
     &.blue {
         background: #3c31dd;
@@ -37,33 +39,52 @@ section {
         background: #ff0066;
     }
     &.dark {
-        background: #0f0f10;
+        background: $background-dark;
     }
 
-    .curve {
+}
+
+// CUREV 1
+.curve {
+    position: absolute;
+    bottom: 0;
+    height: 125px;
+    width: 100%;
+    &::before, &::after {
+        content: '';
+        display: block;
         position: absolute;
-        bottom: 0;
-        height: 125px;
-        width: 100%;
-        &::before, &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            border-radius: 100% 50%;
-            width: 55%;
-            height: 100%;
-        }
-        &::before {
-            background-color: yellow;
-            background-color: #202731;
-            transform: translate(85%, 60%);
-        }
-        &::after {
-            background-color: green;
-            background-color: #3c31dd;
-            transform: translate(-4%, 40%);
-            z-index: -1;
-        }
+        border-radius: 100% 50%;
+        // border: 2px solid green;
+        width: 55%;
+        height: 100%;
+    }
+    &::before {
+        background-color: yellow;
+        background-color: $background-dark;
+        transform: translate(85%, 60%);
+    }
+    &::after {
+        background-color: green;
+        background-color: #3c31dd;
+        transform: translate(-4%, 40%);
+        z-index: -1;
     }
 }
 
+// BUBBLE
+.bubble {
+    isolation: isolate;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 80%;
+        width: 100%;
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+        background-color: $background-darker;
+        z-index: -1; 
+    }
+}
+// DARK 
