@@ -35,6 +35,7 @@ section {
 
     &.blue {
         background: #3c31dd;
+        background: linear-gradient(0deg, #3c31dd,hsl(244, 72%, 40%) );
     }
     &.red {
         background: #dd3f31;
