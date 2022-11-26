@@ -25,7 +25,7 @@ section {
     // border: 3px solid red;
     @include flex (center, center , column);
     position: relative;
-    min-height: 65vh;
+    min-height: 85vh;
     padding: 10vh 10vw;
     gap: 1rem;
 
@@ -39,12 +39,12 @@ section {
         background: #ff0066;
     }
     &.dark {
-        background: $background-dark;
+        background: $background-dark-gradient;
     }
 
 }
 
-// CUREV 1
+// CURVE 1
 .curve {
     position: absolute;
     bottom: 0;
