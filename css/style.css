@@ -28,6 +28,9 @@ section {
   padding: 10vh 10vw;
   gap: 1rem;
 }
+section p {
+  text-transform: uppercase;
+}
 section.blue {
   background: #3c31dd;
 }
@@ -95,7 +98,13 @@ section.dark {
   position: relative;
   display: block;
   width: calc(174% + 1.3px);
-  height: 249px;
+  height: 250px;
+}
+@keyframes curve {
+  50% {
+    height: 200px;
+    transform: scaleX(1.1);
+  }
 }
 
 .wave .shape-fill {
