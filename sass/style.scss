@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: $font-content;
-    // border: 1px solid #0001;
+    // border: 1px solid red;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 
 .container {
     width: 100%;
-    
+    overflow-x: hidden;
 }
 
 section {
@@ -28,6 +28,7 @@ section {
     min-height: 85vh;
     padding: 10vh 10vw;
     gap: 1rem;
+    // width: 100%;
 
     p {
         text-transform: uppercase;
@@ -38,13 +39,16 @@ section {
         background: linear-gradient(0deg, #3c31dd,hsl(244, 72%, 40%) );
     }
     &.red {
-        background: #dd3f31;
+        background: $red;
     }
     &.pink {
         background: #ff0066;
     }
     &.dark {
         background: $background-dark-gradient;
+    }
+    &.tilt-section {
+        background-color: $background-dark;
     }
 
 }
@@ -120,4 +124,35 @@ section {
 
 .wave .shape-fill {
     fill: $background-dark;
+}
+
+.tilt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    
+    height: 30vh;
+    line-height: 0;
+    z-index: 10;
+    // border: 2px solid yellow;
+
+    &.tilt-bottom {
+        top: unset;
+        bottom: 0;
+        transform: rotateX(180deg);
+    }
+}
+
+.tilt svg {
+    position: relative;
+    display: block;
+    width: calc(192% + 1.3px);
+    height: 100%;
+    // border: 3px solid black;
+}
+
+.tilt .shape-fill {
+    fill: $red;
 }

@@ -15,6 +15,7 @@ body {
 
 .container {
   width: 100%;
+  overflow-x: hidden;
 }
 
 section {
@@ -43,6 +44,9 @@ section.pink {
 }
 section.dark {
   background: linear-gradient(0deg, #202731, #0f0f10);
+}
+section.tilt-section {
+  background-color: #202731;
 }
 
 .curve {
@@ -110,6 +114,33 @@ section.dark {
 
 .wave .shape-fill {
   fill: #202731;
+}
+
+.tilt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 30vh;
+  line-height: 0;
+  z-index: 10;
+}
+.tilt.tilt-bottom {
+  top: unset;
+  bottom: 0;
+  transform: rotateX(180deg);
+}
+
+.tilt svg {
+  position: relative;
+  display: block;
+  width: calc(192% + 1.3px);
+  height: 100%;
+}
+
+.tilt .shape-fill {
+  fill: #dd3f31;
 }
 
 /*# sourceMappingURL=style.css.map */
