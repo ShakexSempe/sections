@@ -28,6 +28,7 @@ section {
   min-height: 85vh;
   padding: 10vh 10vw;
   gap: 1rem;
+  isolation: isolate;
 }
 section p {
   text-transform: uppercase;
@@ -141,6 +142,33 @@ section.tilt-section {
 
 .tilt .shape-fill {
   fill: #dd3f31;
+}
+
+.spacer {
+  aspect-ratio: 960/930;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid green;
+}
+
+.layer1 {
+  background-image: url("../img/layer1.svg");
+}
+
+.layer2 {
+  background-image: url("../img/layer2.svg");
+  height: 100vh;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.blob-motion {
+  position: absolute;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */
