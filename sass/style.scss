@@ -164,7 +164,7 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border: 3px solid green;
+    // border: 3px solid green;
     // height: 90vh;
     
 }
@@ -175,7 +175,8 @@ section {
 
 .layer2 {
     background-image: url('../img/layer2.svg');
-    height: 100vh;
+    height: auto;
+
 }
 .flip {
     transform: rotate(180deg);

@@ -150,7 +150,6 @@ section.tilt-section {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border: 3px solid green;
 }
 
 .layer1 {
@@ -159,7 +158,7 @@ section.tilt-section {
 
 .layer2 {
   background-image: url("../img/layer2.svg");
-  height: 100vh;
+  height: auto;
 }
 
 .flip {
